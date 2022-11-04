@@ -1,0 +1,40 @@
+.container {
+}
+
+.imgcontainer {
+  align-self: center;
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+.imgcontainer img {
+  cursor: pointer;
+}
+
+.inputcontainer {
+  display: flex;
+  height: 5.5rem;
+  margin-left: 3rem;
+}
+
+.inputcontainer label {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.inputcontainer input {
+  border: none;
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+}
+
+.inputcontainer::placeholder {
+  color: #fff;
+}
+
+.inputcontainer input:focus {
+  border: none;
+  outline: 0;
+}
