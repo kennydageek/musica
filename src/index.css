@@ -27,5 +27,22 @@ body {
 }
 
 .App {
-  padding: 2.3rem 2.7rem;
+  padding: 2.3rem 3rem;
+}
+.heading {
+  color: white;
+  /* background: burlywood; */
+}
+
+.layout {
+  margin-top: 3.2rem;
+}
+
+.sidebar {
+  /* margin-right: 2rem; */
+  /* background: red; */
+}
+
+.random {
+  background: red;
 }

@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  background-color: #609eaf;
+  /* min-height: 0rem; */
+  border-radius: 4rem;
+  padding: 3.8rem 4.5rem;
+  overflow: hidden;
+  margin-right: 2rem;
+  /* height: 373px; */
+}
+
+.slur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  /* z-index: -1; */
+}
+
+.wrapper_text {
+  /* background: red; */
+}
+
+.title {
+  margin-bottom: 8.5rem;
+  font-size: 1.2rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+  line-height: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.description {
+  font-size: 1.4rem;
+  line-height: 1.68rem;
+  width: 276px;
+  margin-bottom: 7.6rem;
+}
+
+.imgsvg {
+  /* background: yellow; */
+  /* width: 2rem; */
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+
+  top: 0;
+  right: 12rem;
+  /* bottom: 1rem; */
+}
+
+.imgsvg img {
+  /* position: ; */
+  height: 100%;
+}
