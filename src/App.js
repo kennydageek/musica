@@ -14,8 +14,8 @@ function App() {
           <Col xs={3} md={1} className="sidebar">
             <Sidebar />
           </Col>
-          <Col>
-            <div md={5} className="heading">
+          <Col xs={9} md={11}>
+            <div className="heading">
               <Home />
             </div>
           </Col>

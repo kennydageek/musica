@@ -5,16 +5,48 @@
 }
 
 .row {
-  overflow-x: hidden;
-  flex-wrap: nowrap;
+  position: relative;
+  /* overflow-x: hidden; */
+  flex-wrap: nowrap !important;
 }
 
 .albumrow {
   width: 92%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .albumcolumn {
   width: 15%;
   margin-right: 1rem;
+}
+
+.swiperslide {
+  width: 16rem !important;
+}
+
+.swipe {
+  position: relative;
+}
+
+.prev {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 4rem;
+  z-index: 1;
+}
+
+.next {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  color: var(--secondary);
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 4rem;
+  z-index: 1;
 }
