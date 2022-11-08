@@ -30,7 +30,7 @@ const Hero = () => {
           </Col>
         </Row>
 
-        <img src={slur} className={style.slur} />
+        <img src={slur} className={style.slur} alt="" />
       </div>
     </>
   );
