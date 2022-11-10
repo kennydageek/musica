@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import { useRef } from 'react';
 
 import AlbumCard from '../components/AlbumCard/AlbumCard';
+import MusicPlayer from '../components/MusicPlayer/MusicPlayer';
 
 const Home = () => {
   const swiperRef = useRef();
@@ -33,7 +34,7 @@ const Home = () => {
       <Row className={style.swipe}>
         <Swiper
           className={style.swipe}
-          loop={true}
+          // loop={true}
           draggable={true}
           slidesPerView={1}
           modules={[Navigation]}
@@ -88,41 +89,20 @@ const Home = () => {
             className={`${style.prev}`}
             onClick={() => swiperRef.current?.slidePrev()}
           >
-            {' '}
-            &lt;{' '}
+            &lt;
           </p>
           <p
             className={`${style.next}`}
             onClick={() => swiperRef.current?.slideNext()}
           >
-            {' '}
-            &gt;{' '}
+            &gt;
           </p>
         </div>
       </Row>
 
-      {/* <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col>`
-        <Col xs={2} className={`${style.albumcolumn}`}>
-          <AlbumCard />
-        </Col> */}
-      {/* </Row> */}
+      <Row className={`${style.musicplayerwrapper}`}>
+        <MusicPlayer className={`${style.musicplayer}`} />
+      </Row>
     </>
   );
 };
