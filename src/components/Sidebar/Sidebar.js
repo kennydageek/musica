@@ -6,20 +6,49 @@ import video from '../../assets/icons/video-horizontal.svg';
 import playlist from '../../assets/icons/music-library-2.svg';
 import profile from '../../assets/icons/profile.svg';
 import logout from '../../assets/icons/Logout.svg';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+  const navItems = [
+    {
+      src: home,
+      active: true,
+      path: '/',
+    },
+    {
+      src: playlist,
+      active: false,
+      path: '/playlist',
+    },
+    {
+      src: radio,
+      active: false,
+      path: '/radio',
+    },
+    {
+      src: video,
+      active: false,
+      path: '/video',
+    },
+  ];
+
   return (
     <>
       <Container className={style.container}>
-        <img src={home} alt="home" className="home" />
-        <img src={playlist} alt="home" className="playlist" />
-        <img src={radio} alt="home" className="radio" />
-        <img src={video} alt="home" className="video" />
+        {navItems.map((item) => {
+          return (
+            <div key={item.path}>
+              <Link to={item.path} className={`${style.anchor}`}>
+                <img src={item.src} alt="" />
+              </Link>
+            </div>
+          );
+        })}
       </Container>
 
       <Container className={style.container}>
-        <img src={profile} alt="home" />
-        <img src={logout} alt="home" />
+        <img src={profile} alt="profile" />
+        <img src={logout} alt="logout" />
       </Container>
     </>
   );

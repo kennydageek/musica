@@ -1,7 +1,7 @@
-import Hero from '../components/Hero/Hero';
+import Hero from '../../components/Hero/Hero';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ChartCard from '../components/ChartCard/ChartCard';
+import ChartCard from '../../components/ChartCard/ChartCard';
 import style from './home.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
@@ -9,8 +9,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { useRef } from 'react';
 
-import AlbumCard from '../components/AlbumCard/AlbumCard';
-import MusicPlayer from '../components/MusicPlayer/MusicPlayer';
+import AlbumCard from '../../components/AlbumCard/AlbumCard';
+import MusicPlayer from '../../components/MusicPlayer/MusicPlayer';
 
 const Home = () => {
   const swiperRef = useRef();

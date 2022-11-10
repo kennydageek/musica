@@ -38,7 +38,7 @@ const MusicPlayer = () => {
       </div>
       <div className={`${style.volume}`}>
         <img src={volume} alt="" />
-        <ProgressBar now={10} className={`${style.progressbar}`} />
+        <ProgressBar now={30} className={`${style.progressbar}`} />
       </div>
     </div>
   );

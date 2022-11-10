@@ -63,6 +63,7 @@
 .progressbar {
   /* background-color: var(--secondary); */
   --bs-progress-border-radius: 5rem;
+  cursor: pointer;
   --bs-progress-bar-bg: var(--secondary);
   --bs-progress-height: 4px;
   --bs-progress-bg: rgba(255, 255, 255, 0.04);
