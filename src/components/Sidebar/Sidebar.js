@@ -1,36 +1,60 @@
 import style from './sidebar.module.css';
 import Container from 'react-bootstrap/Container';
 import home from '../../assets/icons/Home.svg';
+import homesec from '../../assets/icons/Home-uncolored.svg';
 import radio from '../../assets/icons/radio.svg';
 import video from '../../assets/icons/video-horizontal.svg';
+import videosec from '../../assets/icons/video-horizontal-colored.svg';
 import playlist from '../../assets/icons/music-library-2.svg';
+import playlistsec from '../../assets/icons/music-library-colored.svg';
+import radiosec from '../../assets/icons/radio-colored.svg';
 import profile from '../../assets/icons/profile.svg';
 import logout from '../../assets/icons/Logout.svg';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Sidebar = () => {
-  const navItems = [
+  let [navItems, setNavItem] = useState([
     {
+      id: 1,
       src: home,
       active: true,
       path: '/',
+      altsrc: homesec,
     },
     {
-      src: playlist,
+      id: 2,
+      altsrc: playlist,
       active: false,
       path: '/playlist',
+      src: playlistsec,
     },
     {
-      src: radio,
+      id: 3,
+      altsrc: radio,
       active: false,
       path: '/radio',
+      src: radiosec,
     },
     {
-      src: video,
+      id: 4,
+      altsrc: video,
       active: false,
       path: '/video',
+      src: videosec,
     },
-  ];
+  ]);
+
+  const handleRouting = (item) => {
+    const updateActive = navItems;
+    updateActive.forEach((cur) => {
+      if (cur.id === item.id) {
+        cur.active = true;
+      } else cur.active = false;
+    });
+
+    setNavItem([...updateActive]);
+  };
 
   return (
     <>
@@ -39,7 +63,11 @@ const Sidebar = () => {
           return (
             <div key={item.path}>
               <Link to={item.path} className={`${style.anchor}`}>
-                <img src={item.src} alt="" />
+                <img
+                  src={item.active ? item.src : item.altsrc}
+                  onClick={() => handleRouting(item)}
+                  alt=""
+                />
               </Link>
             </div>
           );

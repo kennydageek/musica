@@ -20,14 +20,20 @@
   cursor: pointer;
 }
 
+.container div:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
 .anchor {
   display: block;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
+}
+
+.anchor:not(:last-of-type) {
+  margin-bottom: 0;
 }
 
 .container img:not(:last-of-type) {
   margin-bottom: 4rem;
   /* margin-top: 3rem; */
 }
-
-
